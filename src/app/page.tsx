@@ -21,13 +21,11 @@ export default function Home() {
         <PageWindow
           isOpen={windowOpen}
           onClose={() => setWindowOpen(false)}
-          zCounter={bringToFront}
-        />
+          zCounter={bringToFront} windowName={"Concerto"}        />
         <PageWindow
           isOpen={window2Open}
           onClose={() => setWindow2Open(false)}
-          zCounter={bringToFront}
-        />
+          zCounter={bringToFront} windowName={"Coo"}        />
 
         <div className="grid grid-cols-1 gap-5 absolute self-start pt-4 pl-3">
           <Icon
