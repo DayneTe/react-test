@@ -198,6 +198,7 @@ const PageWindow: React.FC<windowProps> = ({
     e.preventDefault();
     if (!currWindow.current) return;
     if (isMinimized) return;
+    if(isMaximized) return;
 
     isDragging.current = true;
     startX.current = e.clientX;
@@ -215,7 +216,7 @@ const PageWindow: React.FC<windowProps> = ({
       ref={currWindow}
       style={{ zIndex: zCounter }}
       onMouseDown={onFocus}
-      className={`absolute border-2 border-blue-600 bg-gray-100 rounded-t-lg top-1/4 left-1/4 ${isMaximized ? "w-screen h-[calc(100vh-40px)]" :
+      className={`absolute border-2 border-blue-600 bg-gray-100 rounded-t-lg top-0 left-0 ${isMaximized ? "w-screen h-[calc(100vh-40px)]" :
         "w-120 h-100 bg-gray-100 min-w-50 min-h-50"}
       `}
     >

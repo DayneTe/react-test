@@ -3,6 +3,8 @@ import { useState } from "react";
 import Icon from "./components/icon";
 import PageWindow from "./components/pageWindow";
 import Taskbar from "./components/taskbar";
+import MePage from "./pages/mePage";
+import ListPage from "./pages/listPage";
 
 type WindowState = {
   open: boolean;
@@ -64,7 +66,6 @@ export default function Home() {
     }));
   };
 
-
   const toggleMinimize = (id: string) => {
     setWindows((w) => ({
       ...w,
@@ -102,7 +103,7 @@ export default function Home() {
           onFocus={() => focusWindow("concerto")}
           onMaximize={() => toggleMaximize("concerto")}
         >
-          <div className="w-full h-full bg-amber-500"></div>
+          <MePage />
         </PageWindow>
 
         <PageWindow
@@ -115,7 +116,9 @@ export default function Home() {
           onMinimize={() => minimizeWindow("coo")}
           onFocus={() => focusWindow("coo")}
           onMaximize={() => toggleMaximize("coo")}
-        />
+        >
+          <ListPage />
+        </PageWindow>
 
         <div className="grid grid-cols-1 gap-5 absolute self-start pt-4 pl-3">
           <Icon

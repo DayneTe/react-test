@@ -36,8 +36,7 @@ const Taskbar: React.FC<TaskbarProps> = ({ windows, onToggle }) => {
                             className={`
             ${!win.open || win.minimized ? "bg-sky-300" : "bg-sky-500"}
             hover:bg-sky-500 pt-[3px] ml-1 px-1.5 cursor-pointer rounded-sm
-          `}
-                        >
+          `}>
                             <TaskButton iconImg={win.icon} />
                         </button>
                     ))}
