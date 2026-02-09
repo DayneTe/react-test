@@ -20,7 +20,7 @@ export default function Home() {
       open: false, minimized: false, z: 1, icon: "/vercel.svg",
       maximized: false
     },
-    coo: {
+    TheList: {
       open: false, minimized: false, z: 1, icon: "/globe.svg",
       maximized: false
     },
@@ -107,15 +107,15 @@ export default function Home() {
         </PageWindow>
 
         <PageWindow
-          windowName="Coo"
-          isOpen={windows.coo.open}
-          isMinimized={windows.coo.minimized}
-          isMaximized={windows.coo.maximized}
-          zCounter={windows.coo.z}
-          onClose={() => closeWindow("coo")}
-          onMinimize={() => minimizeWindow("coo")}
-          onFocus={() => focusWindow("coo")}
-          onMaximize={() => toggleMaximize("coo")}
+          windowName="The List"
+          isOpen={windows.TheList.open}
+          isMinimized={windows.TheList.minimized}
+          isMaximized={windows.TheList.maximized}
+          zCounter={windows.TheList.z}
+          onClose={() => closeWindow("TheList")}
+          onMinimize={() => minimizeWindow("TheList")}
+          onFocus={() => focusWindow("TheList")}
+          onMaximize={() => toggleMaximize("TheList")}
         >
           <ListPage />
         </PageWindow>
@@ -128,9 +128,9 @@ export default function Home() {
           />
 
           <Icon
-            name={"coo.exe"}
+            name={"The List"}
             icon={"/globe.svg"}
-            onOpen={() => openWindow("coo")}
+            onOpen={() => openWindow("TheList")}
           />
         </div>
 

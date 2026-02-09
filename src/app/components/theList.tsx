@@ -9,7 +9,7 @@ interface listProps {
 
 const TheList: React.FC<listProps> = ({ listImg, listName, openPage }) => {
     return (
-        <div className="w-[10em] h-[9.5em] flex flex-col pt-3 pb-1 mb-1 rounded-md hover:bg-neutral-400 cursor-pointer"
+        <div className="w-[10em] h-[9.5em] flex flex-col pt-3 pb-1 mb-1 rounded-lg hover:bg-neutral-400 cursor-pointer"
         onClick={openPage}>
                 <div className="flex-1">
                     <Image
