@@ -1,4 +1,4 @@
-import React, { ReactNode, useEffect, useRef } from "react";
+import React, { ReactNode, useEffect, useRef, useState } from "react";
 
 interface windowProps {
   windowName: string;
@@ -48,12 +48,15 @@ const PageWindow: React.FC<windowProps> = ({
   const startLeft = useRef(0);
   const startTop = useRef(0);
 
+  const [size, setSize] = useState({ w: 480, h: 320 })
+  const [pos, setPos] = useState({ x: 80, y: 80 })
+
   useEffect(() => {
-  if (isMaximized && currWindow.current) {
-    currWindow.current.style.top = "0px"
-    currWindow.current.style.left = "0px"
-  }
-}, [isMaximized])
+    if (isMaximized && currWindow.current) {
+      currWindow.current.style.top = "0px"
+      currWindow.current.style.left = "0px"
+    }
+  }, [isMaximized])
 
   const resizeMove = (e: MouseEvent) => {
     if (!resizeDir.current || !currWindow.current) return;
@@ -131,10 +134,8 @@ const PageWindow: React.FC<windowProps> = ({
         break;
     }
 
-    currWindow.current.style.width = width + "px";
-    currWindow.current.style.height = height + "px";
-    currWindow.current.style.left = left + "px";
-    currWindow.current.style.top = top + "px";
+    setSize({ w: width, h: height })
+    setPos({ x: left, y: top })
   };
 
   const resizeUp = () => {
@@ -184,8 +185,7 @@ const PageWindow: React.FC<windowProps> = ({
     nextLeft = Math.max(0, Math.min(nextLeft, maxLeft));
     nextTop = Math.max(0, Math.min(nextTop, maxTop));
 
-    currWindow.current.style.left = nextLeft + "px";
-    currWindow.current.style.top = nextTop + "px";
+    setPos({ x: nextLeft, y: nextTop })
   };
 
   const mouseUp = () => {
@@ -198,7 +198,7 @@ const PageWindow: React.FC<windowProps> = ({
     e.preventDefault();
     if (!currWindow.current) return;
     if (isMinimized) return;
-    if(isMaximized) return;
+    if (isMaximized) return;
 
     isDragging.current = true;
     startX.current = e.clientX;
@@ -214,12 +214,17 @@ const PageWindow: React.FC<windowProps> = ({
   return (
     <div
       ref={currWindow}
-      style={{ zIndex: zCounter }}
       onMouseDown={onFocus}
-      className={`absolute border-2 border-blue-600 bg-gray-100 rounded-t-lg top-0 left-0 ${isMaximized ? "w-screen h-[calc(100vh-40px)]" :
-        "w-120 h-100 bg-gray-100 min-w-50 min-h-50"}
-      `}
+      style={{
+        zIndex: zCounter,
+        width: isMaximized ? "100vw" : size.w,
+        height: isMaximized ? "calc(100vh - 40px)" : size.h,
+        left: isMaximized ? 0 : pos.x,
+        top: isMaximized ? 0 : pos.y,
+      }}
+      className="absolute border-2 border-blue-600 bg-gray-100 rounded-t-lg"
     >
+
       {/* Left */}
       <div
         onMouseDown={(e) => resizeDown(e, "left")}
