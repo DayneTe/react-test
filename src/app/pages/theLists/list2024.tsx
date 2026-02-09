@@ -9,7 +9,7 @@ const List2024: React.FC<listProps> = ({ onBack }) => {
     return (
         <div>
 
-            <div className="postContainer">
+            <div className="postContainer bg-[#2c3a5f]">
                 <button className="py-2 px-7 bg-white text-black font-bold rounded-md mt-5 ml-5 hover:cursor-pointer hover:bg-gray-600 hover:text-white" onClick={onBack}>Back</button>
 
                 <div className="max-w-[1300px] mx-auto">
