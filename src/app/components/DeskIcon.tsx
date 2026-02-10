@@ -8,7 +8,7 @@ interface IconProps {
   onOpen: () => void;
 }
 
-const Icon: React.FC<IconProps> = ({ name, icon, onOpen }) => {
+const DeskIcon: React.FC<IconProps> = ({ name, icon, onOpen }) => {
   const [isActive, setActive] = useState<boolean>(false);
 
   const iconRef = useRef<HTMLDivElement | null>(null);
@@ -59,4 +59,4 @@ const Icon: React.FC<IconProps> = ({ name, icon, onOpen }) => {
     </div>
   );
 };
-export default Icon;
+export default DeskIcon;

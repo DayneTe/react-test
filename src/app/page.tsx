@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import Icon from "./components/icon";
+import DeskIcon from "./components/DeskIcon";
 import PageWindow from "./components/pageWindow";
 import Taskbar from "./components/taskbar";
 import MePage from "./pages/mePage";
@@ -121,13 +121,13 @@ export default function Home() {
         </PageWindow>
 
         <div className="grid grid-cols-1 gap-5 absolute self-start pt-4 pl-3">
-          <Icon
+          <DeskIcon
             name={"concerto.exe"}
             icon={"/vercel.svg"}
             onOpen={() => openWindow("concerto")}
           />
 
-          <Icon
+          <DeskIcon
             name={"The List"}
             icon={"/globe.svg"}
             onOpen={() => openWindow("TheList")}

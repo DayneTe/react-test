@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/components/clock.jsx", "src/app/components/icon.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/components/clock.jsx", "src/app/components/DeskIcon.tsx"],
   "exclude": ["node_modules"]
 }
