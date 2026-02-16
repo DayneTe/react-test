@@ -1,26 +1,41 @@
 import React from "react";
+import Image from "next/image";
 
 const MePage: React.FC = () => {
     return (
         <div className="w-full h-full text-black pt-6 overflow-y-auto">
-            <div className="grid grid-cols-[minmax(0,210px)_1fr] grid-rows-[10%_1fr] h-full">
-                <div className="col-span-2 bg-amber-700 border-b-2 border-orange-900">
-                    Title
+            <div className="grid grid-cols-[minmax(0,210px)_1fr] grid-rows-[15%_1fr] h-full">
+                <div className="bg-[#ee8c6b] relative">
+                    <Image
+                        src={"/chicken.webp"}
+                        fill
+                        quality={10}
+                        alt={""}
+                    />
                 </div>
-                <div className="bg-amber-700 h-full border-r-2 border-orange-900">
+                <div className="bg-[#ee8c6b]" />
+                <div className="bg-[#714D41] h-full">
                     <div className="flex flex-col gap-15 pt-8">
-                        <button className="bg-orange-400 min-w-4/5 mx-auto border-2 rounded-md border-orange-900 py-3 px-5 hover:bg-orange-500 cursor-pointer text-black font-bold">
-                            Draw
-                        </button>
-                        <button className="bg-orange-400 min-w-4/5 mx-auto border-2 rounded-md border-orange-900 py-3 px-5 hover:bg-orange-500 cursor-pointer text-black font-bold">
-                            Cook
-                        </button>
-                        <button className="bg-orange-400 min-w-4/5 mx-auto border-2 rounded-md border-orange-900 py-3 px-5 hover:bg-orange-500 cursor-pointer text-black font-bold">
-                            Live
-                        </button>
+                        <Image
+                            className="mx-auto rounded-xl border-3 border-white"
+                            src={"/mePage/draw/drawBut.png"}
+                            width={170}
+                            height={48}
+                            quality={90}
+                            alt={""}
+                        />
+                        <Image
+                            className="mx-auto rounded-xl border-3 border-white"
+                            src={"/mePage/Food/foodBut.png"}
+                            width={170}
+                            height={48}
+                            quality={90}
+                            alt={""}
+                        />
+
                     </div>
                 </div>
-                <div className="bg-orange-300 h-full">
+                <div className="bg-[#ffd6b8] h-full">
 
                 </div>
             </div>
