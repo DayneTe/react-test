@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import DrawPage from "./mePages/drawPage";
+import DrawPage from "./mePages/artPage";
 import FoodPage from "./mePages/foodPage";
 
 const MePage: React.FC = () => {

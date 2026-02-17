@@ -5,12 +5,15 @@ const DrawPage: React.FC = () => {
   return (
     <div className="">
       <div className="w-full bg-[#c9a890] h-[5em]">
-        <p className="text-5xl font-bold text-white text-center pt-3">ART</p>
+        <p className="text-5xl font-bold text-white text-center pt-3">Art</p>
       </div>
+
       <Post title={"This is a Title"}>
-        <div className="w-20 h-20 bg-amber-500"></div>
+        <div className="w-20 h-20 bg-amber-500 mx-auto"></div>
         <p>this is a description</p>
       </Post>
+
+
     </div>
   );
 };
