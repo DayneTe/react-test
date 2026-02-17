@@ -196,6 +196,8 @@ const List2025: React.FC<listProps> = ({ onBack }) => {
                     <p className="text-center pb-10">+man some of those puzzles are real hard though</p>
                 </div>
             </div>
+            <button className="py-2 px-7 bg-white text-black font-bold rounded-md mb-5 ml-5 hover:cursor-pointer hover:bg-gray-600 hover:text-white"
+                onClick={onBack}>Back</button>
         </div>
     )
 }
