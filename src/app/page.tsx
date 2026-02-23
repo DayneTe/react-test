@@ -5,6 +5,8 @@ import PageWindow from "./components/pageWindow";
 import Taskbar from "./components/taskbar";
 import MePage from "./pages/mePage";
 import ListPage from "./pages/listPage";
+import FfPage from "./pages/ffPage";
+import GamePage from "./pages/gamePage";
 
 type WindowState = {
   open: boolean;
@@ -16,12 +18,20 @@ type WindowState = {
 
 export default function Home() {
   const [windows, setWindows] = useState<Record<string, WindowState>>({
-    concerto: {
+    mePage: {
       open: false, minimized: false, z: 1, icon: "/vercel.svg",
       maximized: false
     },
     TheList: {
       open: false, minimized: false, z: 1, icon: "/globe.svg",
+      maximized: false
+    },
+    gameShelf: {
+      open: false, minimized: false, z: 1, icon: "/start.webp",
+      maximized: false
+    },
+    concerto: {
+      open: false, minimized: false, z: 1, icon: "/window.svg",
       maximized: false
     },
   });
@@ -93,15 +103,15 @@ export default function Home() {
     <main>
       <div className="bg-[url('/wallpaper.webp')] bg-cover bg-no-repeat w-screen h-screen flex items-end">
         <PageWindow
-          windowName="Concerto"
-          isOpen={windows.concerto.open}
-          isMinimized={windows.concerto.minimized}
-          isMaximized={windows.concerto.maximized}
-          zCounter={windows.concerto.z}
-          onClose={() => closeWindow("concerto")}
-          onMinimize={() => minimizeWindow("concerto")}
-          onFocus={() => focusWindow("concerto")}
-          onMaximize={() => toggleMaximize("concerto")}
+          windowName="mePage"
+          isOpen={windows.mePage.open}
+          isMinimized={windows.mePage.minimized}
+          isMaximized={windows.mePage.maximized}
+          zCounter={windows.mePage.z}
+          onClose={() => closeWindow("mePage")}
+          onMinimize={() => minimizeWindow("mePage")}
+          onFocus={() => focusWindow("mePage")}
+          onMaximize={() => toggleMaximize("mePage")}
         >
           <MePage />
         </PageWindow>
@@ -120,11 +130,39 @@ export default function Home() {
           <ListPage />
         </PageWindow>
 
+        <PageWindow
+          windowName="Game Shelf"
+          isOpen={windows.gameShelf.open}
+          isMinimized={windows.gameShelf.minimized}
+          isMaximized={windows.gameShelf.maximized}
+          zCounter={windows.gameShelf.z}
+          onClose={() => closeWindow("gameShelf")}
+          onMinimize={() => minimizeWindow("gameShelf")}
+          onFocus={() => focusWindow("gameShelf")}
+          onMaximize={() => toggleMaximize("gameShelf")}
+        >
+          <GamePage />
+        </PageWindow>
+
+        <PageWindow
+          windowName="Concerto"
+          isOpen={windows.concerto.open}
+          isMinimized={windows.concerto.minimized}
+          isMaximized={windows.concerto.maximized}
+          zCounter={windows.concerto.z}
+          onClose={() => closeWindow("concerto")}
+          onMinimize={() => minimizeWindow("concerto")}
+          onFocus={() => focusWindow("concerto")}
+          onMaximize={() => toggleMaximize("concerto")}
+        >
+          <FfPage />
+        </PageWindow>
+
         <div className="grid grid-cols-1 gap-5 absolute self-start pt-4 pl-3">
           <DeskIcon
-            name={"concerto.exe"}
+            name={"Its Me"}
             icon={"/vercel.svg"}
-            onOpen={() => openWindow("concerto")}
+            onOpen={() => openWindow("mePage")}
           />
 
           <DeskIcon
@@ -132,7 +170,21 @@ export default function Home() {
             icon={"/globe.svg"}
             onOpen={() => openWindow("TheList")}
           />
+
+          <DeskIcon
+            name={"Game Shelf"}
+            icon={"/start.webp"}
+            onOpen={() => openWindow("gameShelf")}
+          />
+
+          <DeskIcon
+            name={"concerto.exe"}
+            icon={"/window.svg"}
+            onOpen={() => openWindow("concerto")}
+          />
         </div>
+
+
 
         <Taskbar windows={windows} onToggle={toggleMinimize} />
       </div>
