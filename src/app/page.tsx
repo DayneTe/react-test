@@ -16,6 +16,7 @@ type WindowState = {
   icon: string;
 };
 
+
 export default function Home() {
   const [windows, setWindows] = useState<Record<string, WindowState>>({
     mePage: {
@@ -36,15 +37,18 @@ export default function Home() {
     },
   });
 
+  const [zCounter, setZCounter] = useState(1);
+
   const focusWindow = (id: string) => {
     setWindows((w) => ({
       ...w,
       [id]: {
         ...w[id],
         minimized: false,
-        z: Date.now(),
+        z: zCounter +1,
       },
     }));
+    setZCounter((c) => c+1)
   };
 
   const closeWindow = (id: string) => {
@@ -71,9 +75,10 @@ export default function Home() {
       [id]: {
         ...w[id],
         maximized: !w[id].maximized,
-        z: Date.now(),
+        z: zCounter +1,
       },
     }));
+    setZCounter((c) => c+1)
   };
 
   const toggleMinimize = (id: string) => {
@@ -82,9 +87,10 @@ export default function Home() {
       [id]: {
         ...w[id],
         minimized: !w[id].minimized,
-        z: Date.now(),
+        z: zCounter +1,
       },
     }));
+    setZCounter((c) => c+1)
   };
 
   const openWindow = (id: string) => {
@@ -94,9 +100,10 @@ export default function Home() {
         ...w[id],
         open: true,
         minimized: false,
-        z: Date.now(),
+        z: zCounter +1,
       },
     }));
+    setZCounter((c) => c+1)
   };
 
   return (
@@ -183,8 +190,6 @@ export default function Home() {
             onOpen={() => openWindow("concerto")}
           />
         </div>
-
-
 
         <Taskbar windows={windows} onToggle={toggleMinimize} />
       </div>
