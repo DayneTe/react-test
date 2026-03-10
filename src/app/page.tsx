@@ -31,7 +31,7 @@ export default function Home() {
       open: false, minimized: false, z: 1, icon: "/start.webp",
       maximized: false
     },
-    concerto: {
+    ffxiv: {
       open: false, minimized: false, z: 1, icon: "/window.svg",
       maximized: false
     },
@@ -48,7 +48,7 @@ export default function Home() {
         z: zCounter +1,
       },
     }));
-    setZCounter((c) => c+1)
+    setZCounter((curr) => curr+1)
   };
 
   const closeWindow = (id: string) => {
@@ -78,7 +78,7 @@ export default function Home() {
         z: zCounter +1,
       },
     }));
-    setZCounter((c) => c+1)
+    setZCounter((curr) => curr+1)
   };
 
   const toggleMinimize = (id: string) => {
@@ -90,7 +90,7 @@ export default function Home() {
         z: zCounter +1,
       },
     }));
-    setZCounter((c) => c+1)
+    setZCounter((curr) => curr+1)
   };
 
   const openWindow = (id: string) => {
@@ -103,7 +103,7 @@ export default function Home() {
         z: zCounter +1,
       },
     }));
-    setZCounter((c) => c+1)
+    setZCounter((curr) => curr+1)
   };
 
   return (
@@ -152,15 +152,15 @@ export default function Home() {
         </PageWindow>
 
         <PageWindow
-          windowName="Concerto"
-          isOpen={windows.concerto.open}
-          isMinimized={windows.concerto.minimized}
-          isMaximized={windows.concerto.maximized}
-          zCounter={windows.concerto.z}
-          onClose={() => closeWindow("concerto")}
-          onMinimize={() => minimizeWindow("concerto")}
-          onFocus={() => focusWindow("concerto")}
-          onMaximize={() => toggleMaximize("concerto")}
+          windowName="FFXIV"
+          isOpen={windows.ffxiv.open}
+          isMinimized={windows.ffxiv.minimized}
+          isMaximized={windows.ffxiv.maximized}
+          zCounter={windows.ffxiv.z}
+          onClose={() => closeWindow("ffxiv")}
+          onMinimize={() => minimizeWindow("ffxiv")}
+          onFocus={() => focusWindow("ffxiv")}
+          onMaximize={() => toggleMaximize("ffxiv")}
         >
           <FfPage />
         </PageWindow>
@@ -185,9 +185,9 @@ export default function Home() {
           />
 
           <DeskIcon
-            name={"concerto.exe"}
+            name={"FFXIV"}
             icon={"/window.svg"}
-            onOpen={() => openWindow("concerto")}
+            onOpen={() => openWindow("ffxiv")}
           />
         </div>
 
