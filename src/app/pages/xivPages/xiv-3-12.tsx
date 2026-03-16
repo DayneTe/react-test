@@ -24,8 +24,9 @@ const Xiv312: React.FC = () => {
                     ))}
                 </div>
             </div>
-            <div className="flex justify-center gap-10">
+            <div className="flex justify-center items-center gap-10">
                 <button onClick={() => setPage(page - 1)} disabled={page === 0} className="text-4xl cursor-pointer">←</button>
+                <p className="mt-2">{page + 1} / {totalPages}</p>
                 <button onClick={() => setPage(page + 1)} disabled={page === totalPages - 1} className="text-4xl cursor-pointer">→</button>
             </div>
         </div>
