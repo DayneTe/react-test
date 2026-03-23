@@ -272,9 +272,10 @@ const PageWindow: React.FC<windowProps> = ({
         className="absolute top-0 left-0 w-[10px] h-[10px] cursor-nw-resize z-30"
       />
 
+{/* Top Bar */}
       <div
         onMouseDown={mouseDown}
-        className="w-full h-7 bg-gradient-to-b from-blue-400 via-blue-600 via-20% to-blue-700 to-90% flex justify-between items-center select-none absolute"
+        className="absolute z-20 w-full h-7 bg-gradient-to-b from-blue-400 via-blue-600 via-20% to-blue-700 to-90% flex justify-between items-center select-none"
       >
         <span className="ml-2">{windowName}</span>
 
@@ -297,7 +298,11 @@ const PageWindow: React.FC<windowProps> = ({
           </button>
         </div>
       </div>
-      {children}
+
+
+      <div className="absolute inset-0 overflow-hidden z-0">
+        {children}
+      </div>
     </div>
   );
 };
