@@ -130,7 +130,7 @@ const List2025: React.FC<listProps> = ({ onBack }) => {
                             height={450}
                         />
 
-                        <p>A pretty fun game, which sadly runs so poorly that it made me lose interest. That being said, you can tell the people behind this game love it so much. With the recent improvements to performance, hopefully, the expansion will give it that push to be up there with the greats</p>
+                        <p>A pretty fun game, which sadly runs so poorly that it made me lose interest. That being said, you can tell the people behind this game love it so much. With the recent improvements to performance, hopefully, the expansion will give it that push to be up there with the greats.</p>
 
                         <h2 className="mt-15">Bravely Default HD</h2>
 
@@ -182,9 +182,10 @@ const List2025: React.FC<listProps> = ({ onBack }) => {
                         />
 
                         <p>The best game I played this year, and one of the coolest games I have ever played in my life. It feels like almost every single part of this game has a secret behind it. Void Stranger requires you to play through this game multiple times. You will be playing through the same section time and time again and with how much content that is in this game you will not get tired of it. The upgrades you get are extremely simple, yet every single one feels like you&apos;re breaking open the game with all the new possibilities that become available. It constantly feels like you&apos;re getting better and learning new info every time you open the game.</p>
-                        <br />
+                        
 
-                        <p>The story is great, and I was always excited to watch a new cutscene. The music is great; and the game feels like it never ends, but when it does finally end, it will be one of the most insane endings you’ve ever seen; I guarantee it.</p>
+                        <p>The story, music and characters are great. I was always excited to watch a new cutscene and I cannot say the same for most of the games I play.
+                            The game feels like it never ends (in a good way), but when it does finally end, it will be one of the most insane endings you’ve ever seen; I guarantee it.</p>
                     </div>
                     <Image
                         className="mx-auto"
