@@ -222,60 +222,60 @@ const PageWindow: React.FC<windowProps> = ({
         left: isMaximized ? 0 : pos.x,
         top: isMaximized ? 0 : pos.y,
       }}
-      className="absolute border-2 border-blue-600 bg-gray-100 rounded-t-lg"
+      className="absolute border-2 border-blue-600 bg-gray-100 rounded-t-lg min-w-md min-h-81"
     >
 
       {/* Left */}
       <div
         onMouseDown={(e) => resizeDown(e, "left")}
-        className="absolute left-0 top-0 w-1 h-full cursor-ew-resize"
+        className="absolute left-0 top-0 z-40 w-1 h-full cursor-ew-resize"
       />
 
       {/* Right */}
       <div
         onMouseDown={(e) => resizeDown(e, "right")}
-        className="absolute right-0 top-0 w-1 h-full cursor-ew-resize"
+        className="absolute right-0 top-0 z-40 w-1 h-full cursor-ew-resize"
       />
 
       {/* Top */}
       <div
         onMouseDown={(e) => resizeDown(e, "top")}
-        className="absolute top-0 left-0 h-1 w-full cursor-ns-resize z-20"
+        className="absolute top-0 left-0 z-40 h-1 w-full cursor-ns-resize"
       />
 
       {/* Bottom */}
       <div
         onMouseDown={(e) => resizeDown(e, "bottom")}
-        className="absolute bottom-0 left-0 h-1 w-full cursor-ns-resize"
+        className="absolute bottom-0 left-0 z-40 h-1 w-full cursor-ns-resize"
       />
 
       <div
         onMouseDown={(e) => resizeDown(e, "se")}
-        className="absolute bottom-0 right-0 w-[10px] h-[10px] cursor-se-resize z-30"
+        className="absolute bottom-0 right-0 z-40 w-[10px] h-[10px] cursor-se-resize"
       />
 
       {/* Bottom-left */}
       <div
         onMouseDown={(e) => resizeDown(e, "sw")}
-        className="absolute bottom-0 left-0 w-[10px] h-[10px] cursor-sw-resize z-30"
+        className="absolute bottom-0 left-0 z-40 w-[10px] h-[10px] cursor-sw-resize"
       />
 
       {/* Top-right */}
       <div
         onMouseDown={(e) => resizeDown(e, "ne")}
-        className="absolute top-0 right-0 w-[10px] h-[10px] cursor-ne-resize z-30"
+        className="absolute top-0 right-0 z-40 w-[10px] h-[10px] cursor-ne-resize"
       />
 
       {/* Top-left */}
       <div
         onMouseDown={(e) => resizeDown(e, "nw")}
-        className="absolute top-0 left-0 w-[10px] h-[10px] cursor-nw-resize z-30"
+        className="absolute top-0 left-0 z-40 w-[10px] h-[10px] cursor-nw-resize"
       />
 
-{/* Top Bar */}
+      {/* Top Bar */}
       <div
         onMouseDown={mouseDown}
-        className="absolute z-20 w-full h-7 bg-gradient-to-b from-blue-400 via-blue-600 via-20% to-blue-700 to-90% flex justify-between items-center select-none"
+        className="absolute top-0 left-0 z-40 w-full h-7 bg-gradient-to-b from-blue-400 via-blue-600 via-20% to-blue-700 to-90% flex justify-between items-center select-none"
       >
         <span className="ml-2">{windowName}</span>
 
@@ -300,7 +300,7 @@ const PageWindow: React.FC<windowProps> = ({
       </div>
 
 
-      <div className="absolute inset-0 overflow-hidden z-0">
+      <div className="absolute inset-0 overflow-hidden pt-7">
         {children}
       </div>
     </div>

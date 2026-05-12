@@ -9,6 +9,7 @@ export const VIEWS = {
     FF7: "FF7",
     FF7R1: "FF7R1",
     FF7R2: "FF7R2",
+    DEADLOCK: "DEADLOCK"
 } as const;
 
 type View = typeof VIEWS[keyof typeof VIEWS];
@@ -22,9 +23,10 @@ const GamePage: React.FC = () => {
                 <>
                     <div className="bg-[#463028] w-4/5 h-[40%] mx-auto max-w-[880px] border-x-18 border-t-15 border-b-5 border-[#9c7567] mt-10 overflow-x-clip">
                         <div className="h-full flex items-end">
-                            <GameBox color={"amber-500"} icon={"/gamePage/ff7's/ff7o.png"} name={"Final Fantasy VII"} system={"/gamePage/steam.png"} openPage={() => setActiveView(VIEWS.FF7)} />
+                            <GameBox color={"[#c9a890]"} icon={"/gamePage/ff7's/ff7o.png"} name={"Final Fantasy VII"} system={"/gamePage/steam.png"} openPage={() => setActiveView(VIEWS.FF7)} />
                             <GameBox color={"red-500"} icon={"/gamePage/ff7's/ff7r.png"} name={"Final Fantasy VII\nRemake"} system={"/gamePage/steam.png"} openPage={() => setActiveView(VIEWS.FF7R1)} />
                             <GameBox color={"[#2C4262]"} icon={"/gamePage/ff7's/ff7r.png"} name={"Final Fantasy VII\nRebirth"} system={"/gamePage/steam.png"} openPage={() => setActiveView(VIEWS.FF7R2)} />
+                            <GameBox color={"[#c9a890]"} icon={"/gamePage/deadlock.png"} name={"Deadlock"} system={"/gamePage/steam.png"} openPage={() => setActiveView(VIEWS.FF7R2)} />
                         </div>
                     </div>
 

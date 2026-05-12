@@ -26,12 +26,11 @@ const GameBox: React.FC<boxProps> = ({ color, icon, system, name, openPage }) =>
                         alt={""}
                     />
                 </div>
-                <div>
+                <div className="relative w-15 h-15 mx-auto mb-5">
                     <Image
                         className="mx-auto mt-2 mb-4"
                         src={icon}
-                        width={80}
-                        height={80}
+                        fill
                         quality={90}
                         alt={""}
                     />
