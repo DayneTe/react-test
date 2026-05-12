@@ -9,7 +9,7 @@ const MePage: React.FC = () => {
     const [activeView, setActiveView] = useState<"Me" | "Draw" | "Food">("Me");
 
     return (
-        <div className="w-full h-full text-black pt-6 overflow-y-auto">
+        <div className="w-full h-full text-black overflow-y-auto">
             <div className="grid grid-cols-[minmax(0,210px)_1fr] grid-rows-[15%_1fr] h-full">
                 <div className="bg-[#ee8c6b] relative">
                     <Image
