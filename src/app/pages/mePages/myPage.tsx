@@ -1,5 +1,6 @@
 import Post from "@/app/components/post";
 import React from "react";
+import Image from "next/image";
 
 const MyPage: React.FC = () => {
   return (
@@ -68,10 +69,18 @@ const MyPage: React.FC = () => {
             <p>
               Nothing more to say than this place was truly impressive.
             </p>
+            <Image
+            className="mx-auto my-3"
+            src={"/mePage/my/SanD/Library.png"}
+            width={650}
+            height={48}
+            quality={90}
+            alt={""}
+          />
           </div>
         </section>
 
-        <section className="mt-16">
+        <section className="mt-12">
 
           <div className="space-y-4 text-xl leading-8 mx-4">
             <p>
@@ -108,6 +117,15 @@ const MyPage: React.FC = () => {
               see all the real games are.
             </p>
 
+            <Image
+            className="mx-auto my-3"
+            src={"/mePage/my/SanD/arcade.png"}
+            width={650}
+            height={48}
+            quality={90}
+            alt={""}
+          />
+
             <p>
               The classics: Frogger, Galaga, Pac-Man.
             </p>
@@ -126,6 +144,15 @@ const MyPage: React.FC = () => {
               That’s where I found something I never would have expected:
               Theatrhythm Final Fantasy arcade edition.
             </p>
+
+            <Image
+              className="mx-auto my-3"
+              src={"/mePage/my/SanD/ff.png"}
+              width={350}
+              height={48}
+              quality={90}
+              alt={""}
+            />
 
             <p>
               I was so excited until I realized I had absolutely no clue how to
@@ -187,6 +214,15 @@ const MyPage: React.FC = () => {
               this bright before.
             </p>
 
+            <Image
+            className="mx-auto my-3"
+            src={"/mePage/my/SanD/Garden.png"}
+            width={650}
+            height={48}
+            quality={90}
+            alt={""}
+          />
+
             <p>
               Lastly, I tried mochi for the first time and it was definitely
               interesting...
@@ -211,11 +247,29 @@ const MyPage: React.FC = () => {
             <p>
               I don&apos;t even remember the last time I went to a zoo so it was
               cool going to one of the best in the country and seeing more rare
-              animals like pandas.
+              animals like pandas. Although the penguins in Georgia are cooler..
             </p>
 
+            <Image
+            className="mx-auto my-3"
+            src={"/mePage/my/SanD/panda.png"}
+            width={650}
+            height={48}
+            quality={90}
+            alt={""}
+          />
+
+            <Image
+            className="mx-auto my-3"
+            src={"/mePage/my/SanD/ping.png"}
+            width={650}
+            height={48}
+            quality={90}
+            alt={""}
+          />
+
             <p>
-              It makes you remember we’re all just trying to live on this
+              It makes you remember all of us, animals included, are just trying to live on this
               floating ball in space.
             </p>
           </div>
