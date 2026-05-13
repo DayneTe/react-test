@@ -8,7 +8,7 @@ const ListPage: React.FC = () => {
     const [activeView, setActiveView] = useState<"home" | "2025" | "2024">("home");
 
     return (
-        <div className="w-full h-full overflow-y-auto bg-neutral-100 text-black pt-6">
+        <div className="w-full h-full overflow-y-auto bg-neutral-100 text-black">
             {activeView === "home" && (
                 <>
                     <h1 className="text-center text-4xl font-bold pt-6 pb-10">The Lists</h1>

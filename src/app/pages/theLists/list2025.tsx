@@ -4,17 +4,16 @@ import Image from "next/image"
 interface listProps {
     onBack: () => void
 }
-
 const List2025: React.FC<listProps> = ({ onBack }) => {
     return (
-        <div className="bg-gradient-to-b from-amber-700 via-amber-950 to-black via-70%">
+        <div className="bg-gradient-to-b from-amber-700 via-amber-950 to-black via-70% pt-4">
             <button className="py-2 px-7 bg-white text-black font-bold rounded-md mt-5 ml-5 hover:cursor-pointer hover:bg-gray-600 hover:text-white"
                 onClick={onBack}>Back</button>
 
             <div className="max-w-[1300px] mx-auto">
                 <div className="postContainer">
 
-                    <h1 className="text-3xl font-bold">The List 2025</h1>
+                    <h1 className="text-3xl font-bold mt-5">The List 2025</h1>
                     <br />
 
                     <div className="text-[1.20rem] leading-5.5">

@@ -8,13 +8,12 @@ interface listProps {
 const List2024: React.FC<listProps> = ({ onBack }) => {
     return (
         <div>
-
-            <div className="postContainer bg-[#2c3a5f]">
+            <div className="postContainer bg-[#2c3a5f] pt-4">
                 <button className="py-2 px-7 bg-white text-black font-bold rounded-md mt-5 ml-5 hover:cursor-pointer hover:bg-gray-600 hover:text-white" onClick={onBack}>Back</button>
 
                 <div className="max-w-[1300px] mx-auto">
 
-                    <h1 className="text-3xl font-bold">The List 2024</h1>
+                    <h1 className="text-3xl font-bold mt-5">The List 2024</h1>
                     <br />
 
                     <div className="text-[1.20rem] leading-5.5">
