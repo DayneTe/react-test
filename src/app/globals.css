@@ -39,7 +39,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Segoe UI', Tahoma, sans-serif;
+  font-family: "Segoe UI", Tahoma, sans-serif;
 }
 
 .listAward {
@@ -50,8 +50,8 @@ body {
     font-size: 135%;
   }
 
-  h1{
-    font-size: 200%
+  h1 {
+    font-size: 200%;
   }
 
   h2 {

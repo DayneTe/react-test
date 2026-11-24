@@ -13,7 +13,7 @@ const GameBox: React.FC<boxProps> = ({ color, icon, system, name, openPage }) =>
 
 
     return (
-        <div className={`flex flex-col w-[12%] h-[90%] bg-${color} cursor-pointer mx-1 rounded-sm min-w-15 border-2 border-gray-600 overflow-y-clip
+        <div className={`@container flex flex-col w-[12%] h-[90%] bg-${color} cursor-pointer mx-1 rounded-sm min-w-15 border-2 border-gray-600 overflow-y-clip
          hover:mb-6 hover:shadow-[0_0_15px_rgba(255,255,255,1)] transition-all duration-200 ease-out`} onClick={openPage}>
             <div>
                 <div className="bg-white rounded-t-sm border-b-2 border-black">
@@ -26,9 +26,9 @@ const GameBox: React.FC<boxProps> = ({ color, icon, system, name, openPage }) =>
                         alt={""}
                     />
                 </div>
-                <div className="relative w-15 h-15 mx-auto mb-5">
+                <div className="relative w-14 h-14 mx-auto">
                     <Image
-                        className="mx-auto mt-2 mb-4"
+                        className="p-1"
                         src={icon}
                         fill
                         quality={90}
@@ -36,7 +36,7 @@ const GameBox: React.FC<boxProps> = ({ color, icon, system, name, openPage }) =>
                     />
                 </div>
             </div>
-            <div className="flex items-center text-center font-bold whitespace-pre-line w-full h-full" style={{ writingMode: 'vertical-rl' }}>{name}</div>
+            <div className="flex items-center font-bold whitespace-pre-line w-full h-full pt-2" style={{ writingMode: 'vertical-rl' }}>{name}</div>
         </div>
     )
 }

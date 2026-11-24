@@ -32,34 +32,39 @@ const MePage: React.FC = () => {
                 </div>
                 <div className="bg-[#815e53] h-full">
                     <div className="flex flex-col gap-15 pt-8">
-                        <Image
-                            className="mx-auto rounded-xl border-3 border-white cursor-pointer"
-                            src={"/mePage/my/meBut.png"}
-                            width={170}
-                            height={48}
-                            quality={90}
-                            alt={""}
-                            onClick={() => setActiveView("Me")}
-                        />
-                        <Image
-                            className="mx-auto rounded-xl border-3 border-white cursor-pointer"
-                            src={"/mePage/draw/drawBut.png"}
-                            width={170}
-                            height={48}
-                            quality={90}
-                            alt={""}
-                            onClick={() => setActiveView("Draw")}
-                        />
-                        <Image
-                            className="mx-auto rounded-xl border-3 border-white cursor-pointer"
-                            src={"/mePage/Food/foodBut.png"}
-                            width={170}
-                            height={48}
-                            quality={90}
-                            alt={""}
-                            onClick={() => setActiveView("Food")}
-                        />
-
+                        <div className="transition duration-75 hover:-translate-y-2">
+                            <Image
+                                className="mx-auto rounded-xl border-3 border-white cursor-pointer"
+                                src={"/mePage/my/meBut.png"}
+                                width={170}
+                                height={48}
+                                quality={90}
+                                alt={""}
+                                onClick={() => setActiveView("Me")}
+                            />
+                        </div>
+                        <div className="transition duration-75 hover:-translate-y-2">
+                            <Image
+                                className="mx-auto rounded-xl border-3 border-white cursor-pointer"
+                                src={"/mePage/draw/drawBut.png"}
+                                width={170}
+                                height={48}
+                                quality={90}
+                                alt={""}
+                                onClick={() => setActiveView("Draw")}
+                            />
+                        </div>
+                        <div className="transition duration-75 hover:-translate-y-2">
+                            <Image
+                                className="mx-auto rounded-xl border-3 border-white cursor-pointer"
+                                src={"/mePage/Food/foodBut.png"}
+                                width={170}
+                                height={48}
+                                quality={90}
+                                alt={""}
+                                onClick={() => setActiveView("Food")}
+                            />
+                        </div>
                     </div>
                 </div>
                 <div className="bg-[#ffd6b8] h-full">
